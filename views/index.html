@@ -6,7 +6,7 @@
         <div id="count" hx-swap="innerHTML">
             {{ template "count" . }}
         </div>
-        <button hx-target="#count" hx-get="/">
+        <button hx-target="#count" hx-post="/add">
             Increment
         </button>
     </body>

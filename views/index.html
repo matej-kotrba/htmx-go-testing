@@ -1,18 +1,15 @@
-<html>
-    <head>
-        <title>Our First HTML Site!</title>
-    </head>
-    <body>
-        <div id="count" hx-swap="innerHTML">
-            {{ template "count" . }}
-        </div>
-        <button hx-target="#count" hx-post="/add">
-            Increment
-        </button>
-    </body>
-    <script src="https://unpkg.com/htmx.org@2.0.3"></script>
-</html>
-
-{{ block "count" . }}
-    Count {{ .Count }}
+{{ block "index" . }}
+    <html>
+        <head>
+            <title>Our First HTML Site!</title>
+        </head>
+        <body>
+            <form action="">
+                <input type="text" name="name">
+                <input type="password" name="password">
+                <button>Submit</button>
+            </form>
+        </body>
+        <script src="https://unpkg.com/htmx.org@2.0.3"></script>
+    </html>
 {{ end }}
